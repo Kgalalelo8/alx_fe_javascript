@@ -1,9 +1,18 @@
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Quote Generator</title>
-    
+    <style>
+        /* Add any additional styling here */
+        #conflictResolution {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Dynamic Quote Generator</h1>
@@ -23,6 +32,12 @@
     
     <button id="exportQuotes">Export Quotes</button>
     <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
+    
+    <div id="conflictResolution">
+        <h3>Conflicts Detected:</h3>
+        <ul id="conflictList"></ul>
+        <button onclick="resolveConflicts()">Resolve Conflicts</button>
+    </div>
     
     <script src="script.js"></script>
 </body>
